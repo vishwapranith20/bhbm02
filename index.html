@@ -1,55 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<link rel="stylesheet" href="/styles/main.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
 
+  <!-- Optional: Google Fonts (uncomment if you want to use them) -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet"> -->
 
+  <!-- Link to styles -->
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <header>
-        <h1>Vishwa Pranith</h1>
-        <main>
-            ---IGNORE---
-        
-        </main>
-       <section>
-        <h2>ABOUTH ME</h2>
-        <P>my web page today.</P>
-       </section>
-       <section>
+  <!-- Header / top banner -->
+  <header>
+    <div class="container header-inner">
+      <h1 id="site-title">Your Name</h1>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-       <h2>project</h2> 
-       <ul>
-       <li>project 01</li>
-       <li>project02</li>
-       <li>project03</li>
-</ul>
+  <!-- Main content -->
+  <main>
+    <!-- About section -->
+    <section id="about" class="card">
+      <div class="container about-inner">
+        <img src="images/profile.jpg" alt="Profile photo of Your Name" id="profile-img" />
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            I am a (one-sentence realistic bio) — for example:
+            "A first-year biomedical technology student building web apps and learning image processing."
+          </p>
+          <p class="skills"><strong>Skills:</strong> HTML • CSS • JavaScript • Basic Python</p>
+        </div>
+      </div>
+    </section>
 
-       </section>
+    <!-- Projects section -->
+    <section id="projects" class="card">
+      <div class="container">
+        <h2>Projects</h2>
+        <ul class="projects-list">
+          <li>
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio (this site). Built with semantic HTML and responsive CSS.</p>
+          </li>
+          <li>
+            <h3>Image Processing Mini Project</h3>
+            <p>Simple image filters and histogram display for study assignments.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
 
+    <!-- Contact section -->
+    <section id="contact" class="card">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>If you want to reach me, email: <a href="mailto:you@example.com">you@example.com</a></p>
 
-<Section>
-    <h3>contact</h3>
+        <!-- Simple contact form (non-sending placeholder) -->
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Form not connected — add backend or mailto.');">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required>
 
-    <p>you can reach me at <a href="www.electricelvehicaleco.com"></a></p>
-    <div class="class">New class</div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
 
-    <div id="id">name</div>
-</Section>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Write a short message..." required></textarea>
 
-    </header>
+          <button type="submit" class="btn">Send (demo)</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy;2025 vishwapranith</p>
-        <p>follow me on<a href="www.bing.com">www.vishwa.com</a><br>
-            whatsapp:<a href="www.whatsapp.com">www.whatsapp.com</a><br>
-            facebook:<a href="www.facebook.com">www.facebook.com</a><br>
-             </p>
-        
-    </footer>
-    
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Your Name — Built with semantic HTML & CSS</p>
+      <p class="small-links">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a> •
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Small nicety: set copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
