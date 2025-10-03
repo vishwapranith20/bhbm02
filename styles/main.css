@@ -18,6 +18,13 @@
     --container-width: 1000px;
     --max-width: 1100px;
   }
+
+  img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+  }
   
   /* ---------- Global / Base ---------- */
   * { box-sizing: border-box; }
